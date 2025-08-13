@@ -2,44 +2,38 @@
 
 [![Live Site](https://img.shields.io/badge/Live%20Portfolio-View%20Now-blue?style=for-the-badge&logo=github)](https://nwokike.github.io/portfolio/)
 
-This is the source code for my personal portfolio, built from scratch to showcase my skills, projects, and my journey from engineering to software development.
+This repository contains the source code for my personal portfolio. Built with HTML, Tailwind CSS, and vanilla JavaScript, it showcases my journey as a software developer and research writer, highlighting my skills and key projects.
 
 ---
 
 ### ✨ Key Features
 
-* **🌓 Light & Dark Mode**: A sleek, user-selectable theme switcher that remembers your choice.
+* **🌓 Light & Dark Mode**: A sleek, user-selectable theme switcher that remembers your choice in local storage.
 * **📱 Fully Responsive Design**: Adapts perfectly to all screen sizes, from mobile phones to widescreen desktops.
 * **🚀 Interactive UI**: Features smooth, scroll-triggered animations and a clean, modern user interface.
 * **✉️ Direct Email Contact**: A simple and effective `mailto` link for easy communication.
-* **📄 Integrated CV**: Allows visitors to download a PDF version of my resume directly.
-* **🛠️ Tech Showcase**: Highlights my technical toolkit and tracks my learning progress.
 
 ---
 
-### 💻 Tech Stack
+### 🛠️ Technologies Used
 
-This site was built with a focus on simplicity, performance, and modern web standards.
-
-* **HTML5**: For semantic structure and content.
-* **Tailwind CSS**: For a responsive, utility-first styling workflow.
-* **JavaScript (ES6+)**: For interactivity, animations, and theme management.
-* **Feather Icons**: For clean and lightweight icons.
+* **HTML5**: For semantic and accessible page structure.
+* **Tailwind CSS**: For a utility-first approach to styling and responsive design.
+* **JavaScript (Vanilla)**: For theme switching, the mobile menu, and other interactive elements.
+* **Feather Icons**: For clean and lightweight SVG icons.
 
 ---
 
-### ⚙️ Local Setup
+### 🚀 How to Use
 
-Want to run this project locally? It's simple—no build steps required.
+To view or edit this project locally:
 
 1.  **Clone the repository:**
-    ```bash
+    ```sh
     git clone [https://github.com/Nwokike/portfolio.git](https://github.com/Nwokike/portfolio.git)
     ```
-2.  **Navigate into the directory:**
-    ```bash
+2.  **Navigate to the directory:**
+    ```sh
     cd portfolio
     ```
-3.  **Open `index.html` in your web browser.**
-
-That's it! You're all set.
+3.  **Open the `index.html` file in your browser** to view the website.
