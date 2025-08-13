@@ -30,7 +30,7 @@ To view or edit this project locally:
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/Nwokike/portfolio.git](https://github.com/Nwokike/portfolio.git)
+    git clone https://github.com/Nwokike/portfolio.git
     ```
 2.  **Navigate to the directory:**
     ```sh
