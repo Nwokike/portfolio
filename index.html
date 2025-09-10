@@ -1,184 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onyeka Nwokike | Software Developer</title>
-    <meta name="description" content="Onyeka Nwokike's modern, beautiful software developer portfolio.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="FB_IMG.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Onyeka Nwokike | Software Engineer & Agricultural Engineer</title>
+  <meta name="description" content="Modern minimalist portfolio for Onyeka Nwokike, Software Engineer & Agricultural Engineer.">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="FB_IMG.jpg"/>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container nav-content">
-            <div class="logo">Onyeka<span class="accent">.</span></div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-icons">
-                <button id="themeToggle" title="Toggle dark mode">
-                    <span id="themeIcon" aria-hidden="true">🌙</span>
-                </button>
-                <button id="mobileMenuBtn" class="menu-btn" aria-label="Open menu">
-                    &#9776;
-                </button>
-            </div>
-        </div>
-        <ul class="nav-links mobile" id="mobileMenu">
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#education" class="nav-link">Education</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <!-- Hero -->
-        <section class="hero" id="hero">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <h1>Hi, I'm <span class="accent">Onyeka Nwokike</span></h1>
-                    <p class="subtitle">Software Developer & Research Writer</p>
-                    <p class="desc">
-                        I build clean, responsive, and user-focused web applications. I combine engineering logic with creativity to deliver sustainable solutions.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn primary">See My Work</a>
-                        <button class="btn" id="cvBtn">View CV</button>
-                    </div>
-                    <div class="socials">
-                        <a href="https://github.com/Nwokike" target="_blank" title="GitHub"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"></a>
-                        <a href="https://www.linkedin.com/in/onyeka-nwokike" target="_blank" title="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"></a>
-                        <a href="https://x.com/aham_bu_onyeka" target="_blank" title="Twitter"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter"></a>
-                    </div>
-                </div>
-                <div class="hero-img">
-                    <img src="FB_IMG.jpg" alt="Onyeka Nwokike photo" onerror="this.src='https://placehold.co/400x400/1e293b/e2e8f0?text=Onyeka';">
-                </div>
-            </div>
-        </section>
-        <!-- About -->
-        <section class="section" id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>
-                    My journey started in Agricultural & Bioresources Engineering, where I learned systematic problem solving. Now, I build technology for real-world impact, sharpening my skills with the Power Learn Project and open source.
-                </p>
-            </div>
-        </section>
-        <!-- Skills -->
-        <section class="section" id="skills">
-            <div class="container">
-                <h2>My Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">HTML5</div>
-                    <div class="skill-card">CSS3</div>
-                    <div class="skill-card">JavaScript</div>
-                    <div class="skill-card skill-cert">
-                        Python (PCAP Certified)
-                        <button class="btn small" id="certBtn">View Certificate</button>
-                    </div>
-                    <div class="skill-card">WordPress & SEO</div>
-                    <div class="skill-card">Databases & SQL</div>
-                </div>
-            </div>
-        </section>
-        <!-- Projects -->
-        <section class="section" id="projects">
-            <div class="container">
-                <h2>Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>YieldWise AI</h3>
-                        <p>
-                            An all-in-one platform for African farmers to plan profitable farms, diagnose plant diseases with a photo, and build their agricultural business using the power of AI.<br>
-                            <em>Core Features:</em> AI Farm Planner, Plant Disease Diagnosis, Shareable Showcases, Professional PDFs, Interactive Chat, and User Accounts.<br>
-                            <strong>Tech:</strong> Python, Flask, SQLite, LangChain, Google Gemini, HTML5/CSS3/JS
-                        </p>
-                        <a href="https://yieldwise-ai.onrender.com/" target="_blank" class="project-link">Live Demo &rarr;</a>
-                        <a href="https://github.com/Nwokike/yieldwise-ai" target="_blank" class="project-link">GitHub Repo &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Ubuntu Requests – Image Fetcher</h3>
-                        <p>
-                            Inspired by the Ubuntu philosophy: <q>I am because we are.</q><br>
-                            Demonstrates how Python can connect to the global community, fetch/share images, and organize them efficiently.<br>
-                            <em>Features:</em> Fetches images from URLs, skips duplicates, checks file size/type, and handles errors gracefully.<br>
-                            <strong>Tech:</strong> Python, Requests
-                        </p>
-                        <a href="https://github.com/Nwokike/Ubuntu_Requests" target="_blank" class="project-link">GitHub Repo &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Igbo Archives</h3>
-                        <p>
-                            Founder. Managed technical development and SEO for organic growth.<br>
-                            A content-driven project for preserving Igbo heritage.<br>
-                            <strong>Built with:</strong> WordPress
-                        </p>
-                        <a href="https://Igboarchives.com.ng" target="_blank" class="project-link">Visit Site &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Barroti Apartments</h3>
-                        <p>
-                            Designed a modern brand site for lead generation and a clean UI.<br>
-                            <strong>Built with:</strong> React
-                        </p>
-                        <a href="https://apartments.barroti.org" target="_blank" class="project-link">Visit Site &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Education -->
-        <section class="section" id="education">
-            <div class="container">
-                <h2>Education & Credentials</h2>
-                <div class="timeline">
-                    <div class="edu-item">
-                        <span class="edu-year">2025 - Present</span>
-                        <span class="edu-title">Power Learn Project</span>
-                        <span class="edu-desc">Software Engineering Program</span>
-                    </div>
-                    <div class="edu-item">
-                        <span class="edu-year">Issued Jul 2019</span>
-                        <span class="edu-title">PCAP: Programming Essentials in Python</span>
-                        <span class="edu-desc">Cisco Networking Academy & OpenEDG</span>
-                    </div>
-                    <div class="edu-item">
-                        <span class="edu-year">2017 - 2023</span>
-                        <span class="edu-title">University of Nigeria, Nsukka</span>
-                        <span class="edu-desc">B.Eng in Agricultural & Bioresources Engineering</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Contact -->
-        <section class="section" id="contact">
-            <div class="container">
-                <h2>Let's Connect</h2>
-                <p>I'm open to opportunities and collaborations! Reach out if my skills fit your team.</p>
-                <a href="mailto:nwokikeonyeka@gmail.com" class="btn primary">Send me an Email</a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            &copy; <span id="year"></span> Onyeka Nwokike. Built with <span class="accent">&hearts;</span>
-        </div>
-    </footer>
-
-    <!-- Modal for CV and Certificate -->
-    <div id="modal" class="modal">
-        <div class="modal-backdrop" id="modalBackdrop"></div>
-        <div class="modal-content" id="modalContent">
-            <button id="modalClose" class="modal-close">&times;</button>
-            <iframe id="modalIframe" src="" frameborder="0" title="Document Viewer"></iframe>
-        </div>
+  <nav class="navbar">
+    <div class="container nav-row">
+      <div class="logo">Onyeka</div>
+      <div class="nav-actions">
+        <button id="themeToggle" title="Toggle dark mode">
+          <span id="themeIcon" aria-hidden="true">🌙</span>
+        </button>
+        <button id="menuBtn" class="menu-btn" aria-label="Open menu">&#9776;</button>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
     </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
+      <ul>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Onyeka Nwokike</h1>
+          <p class="subtitle">Software Engineer & Agricultural Engineer</p>
+          <p class="desc">
+            Building practical, elegant web solutions.<br>
+            Focused on user experience, clean code, and continuous learning.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn" id="cvBtn">View CV</button>
+          </div>
+          <div class="socials">
+            <a href="https://github.com/Nwokike" target="_blank" aria-label="GitHub"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg"/></a>
+            <a href="https://www.linkedin.com/in/onyeka-nwokike" target="_blank" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"/></a>
+            <a href="mailto:nwokikeonyeka@gmail.com" aria-label="Email"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg"/></a>
+          </div>
+        </div>
+        <div class="hero-pic-wrap">
+          <img class="hero-pic" src="FB_IMG.jpg" alt="Onyeka Nwokike photo" onerror="this.src='https://placehold.co/300x300/222/eee?text=Onyeka';">
+        </div>
+      </div>
+    </section>
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          My roots are in Agricultural Engineering.<br>
+          My passion is technology.<br>
+          I bridge both by building digital products for real-world needs, always growing and improving.
+        </p>
+      </div>
+    </section>
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-list">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span class="with-btn">
+            Python
+            <button class="btn small" id="certBtn" title="View Certificate">View Certificate</button>
+          </span>
+          <span>Flask</span>
+          <span>WordPress</span>
+          <span>SQL</span>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>YieldWise AI</h3>
+            <p>
+              AI-powered web tool for African farmers: plan farms, diagnose plant diseases, and grow agribusiness. <br/>
+              <strong>Stack:</strong> Python, Flask, LangChain, AI APIs, JS, HTML/CSS
+            </p>
+            <div class="project-links">
+              <a href="https://yieldwise-ai.onrender.com/" target="_blank">Live</a>
+              <a href="https://github.com/Nwokike/yieldwise-ai" target="_blank">GitHub</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>Ubuntu Requests</h3>
+            <p>
+              Minimal Python tool to fetch and organize images from the web safely.<br/>
+              <strong>Stack:</strong> Python, Requests
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/Nwokike/Ubuntu_Requests" target="_blank">GitHub</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>Igbo Archives</h3>
+            <p>
+              Preserving heritage with a content-rich WordPress website, grown organically with SEO.<br/>
+              <strong>Stack:</strong> WordPress
+            </p>
+            <div class="project-links">
+              <a href="https://igboarchives.com.ng" target="_blank">Visit</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>Barroti Apartments</h3>
+            <p>
+              Modern landing page and lead-gen site for apartments business.<br/>
+              <strong>Stack:</strong> React
+            </p>
+            <div class="project-links">
+              <a href="https://apartments.barroti.org" target="_blank">Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section">
+      <div class="container contact-card">
+        <h2>Contact</h2>
+        <p>Want to collaborate, or just say hi?</p>
+        <a href="mailto:nwokikeonyeka@gmail.com" class="btn">Email Me</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <span>&copy; <span id="year"></span> Onyeka Nwokike</span>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
+  <!-- Modal for CV and Certificate -->
+  <div id="modal" class="modal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content" id="modalContent">
+      <button id="modalClose" class="modal-close">&times;</button>
+      <iframe id="modalIframe" src="" frameborder="0" title="Document Viewer"></iframe>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
