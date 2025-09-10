@@ -1,424 +1,184 @@
 <!DOCTYPE html>
-<!-- 
-  The 'dark' class is toggled by JavaScript to switch themes.
-  'scroll-smooth' enables smooth scrolling for anchor links.
--->
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onyeka Nwokike | Software Developer</title>
-
-    <!-- Meta tags for SEO and Social Sharing -->
-    <meta name="description" content="Onyeka Nwokike's portfolio. A Software Developer and Research Writer building impactful and user-focused web applications.">
-    <meta name="author" content="Onyeka Nwokike">
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CSS from CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Feather Icons for theme toggle -->
-    <script src="https://unpkg.com/feather-icons"></script>
-
-    <!-- 
-      Tailwind CSS Configuration
-      - Defines custom fonts, colors, and animations for a consistent theme.
-    -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        'brand-primary': '#3b82f6', 
-                        'brand-secondary': '#10b981',
-                        // Light theme
-                        'light-bg': '#f8fafc',
-                        'light-card': '#ffffff',
-                        'light-text': '#0f172a',
-                        'light-subtext': '#475569',
-                        // Dark theme
-                        'dark-bg': '#0f172a',
-                        'dark-card': '#1e293b',
-                        'dark-text': '#e2e8f0',
-                        'dark-subtext': '#94a3b8',
-                    },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-                        'subtle-pulse': 'subtlePulse 2.5s infinite ease-in-out',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        subtlePulse: {
-                            '0%, 100%': { boxShadow: '0 0 0 0 rgba(59, 130, 246, 0.4)' },
-                            '50%': { boxShadow: '0 0 0 12px rgba(59, 130, 246, 0)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- Custom Styles -->
-    <style>
-        /* Custom scrollbar for a modern look that adapts to the theme */
-        :root {
-            --scrollbar-track: #f1f5f9;
-            --scrollbar-thumb: #94a3b8;
-            --scrollbar-thumb-hover: #64748b;
-        }
-        html.dark {
-            --scrollbar-track: #1e293b;
-            --scrollbar-thumb: #475569;
-            --scrollbar-thumb-hover: #64748b;
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--scrollbar-track);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--scrollbar-thumb);
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--scrollbar-thumb-hover);
-        }
-        /* Added a visible focus state for better accessibility */
-        :focus-visible {
-            outline: 2px solid #3b82f6;
-            outline-offset: 2px;
-        }
-    </style>
+    <meta name="description" content="Onyeka Nwokike's modern, beautiful software developer portfolio.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="FB_IMG.jpg">
 </head>
-
-<body class="bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text font-sans antialiased transition-colors duration-300">
-
-    <!-- Header & Navigation -->
-    <header id="header" class="bg-light-bg/80 dark:bg-dark-bg/80 backdrop-blur-lg sticky top-0 z-50 transition-all duration-300">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-light-text dark:text-white tracking-wider">
-                Onyeka<span class="text-brand-primary">.</span>
-            </a>
-            <!-- Desktop Navigation Links -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#about" class="text-light-subtext dark:text-dark-subtext hover:text-light-text dark:hover:text-white transition-colors duration-300">About</a>
-                <a href="#scale" class="text-light-subtext dark:text-dark-subtext hover:text-light-text dark:hover:text-white transition-colors duration-300">Skills</a>
-                <a href="#projects" class="text-light-subtext dark:text-dark-subtext hover:text-light-text dark:hover:text-white transition-colors duration-300">Projects</a>
-                <a href="#education" class="text-light-subtext dark:text-dark-subtext hover:text-light-text dark:hover:text-white transition-colors duration-300">Education</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                 <a href="#contact" class="hidden md:inline-block bg-brand-primary text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-500 transition-all duration-300 shadow-lg shadow-blue-500/20">
-                    Contact Me
-                </a>
-                <!-- Theme Toggle Button -->
-                <button id="theme-toggle" class="p-2 rounded-full text-light-subtext dark:text-dark-subtext hover:bg-gray-200 dark:hover:bg-slate-700" aria-label="Toggle dark mode">
-                    <i data-feather="moon" class="hidden dark:inline"></i>
-                    <i data-feather="sun" class="inline dark:hidden"></i>
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">Onyeka<span class="accent">.</span></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button id="themeToggle" title="Toggle dark mode">
+                    <span id="themeIcon" aria-hidden="true">🌙</span>
                 </button>
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-light-text dark:text-white" aria-label="Open mobile menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <button id="mobileMenuBtn" class="menu-btn" aria-label="Open menu">
+                    &#9776;
                 </button>
             </div>
-        </nav>
-        <!-- Mobile Menu (hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#about" class="block py-2 text-light-subtext dark:text-dark-subtext hover:text-light-text dark:hover:text-white">About</a>
-            <a href="#scale" class="block py-2 text-light-subtext dark:text-dark-subtext hover:text-light-text dark:hover:text-white">Skills</a>
-            <a href="#projects" class="block py-2 text-light-subtext dark:text-dark-subtext hover:text-light-text dark:hover:text-white">Projects</a>
-            <a href="#education" class="block py-2 text-light-subtext dark:text-dark-subtext hover:text-light-text dark:hover:text-white">Education</a>
-            <a href="#contact" class="block mt-2 text-center bg-brand-primary text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-500 transition-all duration-300">Contact Me</a>
         </div>
-    </header>
-
-    <!-- Main Content Wrapper -->
-    <main class="container mx-auto px-6">
-
-        <!-- Hero Section -->
-        <section id="hero" class="min-h-[80vh] flex items-center py-16 md:py-0">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Hero Text Content -->
-                <div class="order-2 md:order-1 animate-fade-in-up">
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-light-text dark:text-white leading-tight mb-4">
-                        Software Developer &amp; Research Writer
-                    </h1>
-                    <p class="text-lg md:text-xl text-light-subtext dark:text-dark-subtext mb-8 max-w-xl">
-                        I build clean, responsive, and user-focused web applications. My goal is to create impactful and sustainable technology by combining my development skills with a data-driven, research-oriented approach.
+        <ul class="nav-links mobile" id="mobileMenu">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="accent">Onyeka Nwokike</span></h1>
+                    <p class="subtitle">Software Developer & Research Writer</p>
+                    <p class="desc">
+                        I build clean, responsive, and user-focused web applications. I combine engineering logic with creativity to deliver sustainable solutions.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#projects" class="bg-brand-primary text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-500 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/30">
-                            See My Work
-                        </a>
-                        <a href="./CV ONYEKA NWOKIKE .pdf" download="CV-Onyeka-Nwokike.pdf" class="bg-light-card dark:bg-dark-card text-light-subtext dark:text-dark-subtext font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-700 hover:text-light-text dark:hover:text-white transition-all duration-300">
-                            Download CV
-                        </a>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn primary">See My Work</a>
+                        <button class="btn" id="cvBtn">View CV</button>
                     </div>
-                    <!-- Social Profiles -->
-                    <div class="flex items-center space-x-6 mt-10">
-                        <a href="https://github.com/Nwokike" target="_blank" rel="noopener noreferrer" aria-label="Onyeka's GitHub Profile" class="text-light-subtext dark:text-dark-subtext hover:text-brand-primary dark:hover:text-brand-primary transition-colors duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4 -4.3-2.5 -6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/onyeka-nwokike" target="_blank" rel="noopener noreferrer" aria-label="Onyeka's LinkedIn Profile" class="text-light-subtext dark:text-dark-subtext hover:text-brand-primary dark:hover:text-brand-primary transition-colors duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        </a>
-                        <a href="https://x.com/aham_bu_onyeka" target="_blank" rel="noopener noreferrer" aria-label="Onyeka's X (Twitter) Profile" class="text-light-subtext dark:text-dark-subtext hover:text-brand-primary dark:hover:text-brand-primary transition-colors duration-300">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-1.6 13.023h1.794L4.985 2.185H3.08L11 13.773Z"/>
-                            </svg>
-                        </a>
+                    <div class="socials">
+                        <a href="https://github.com/Nwokike" target="_blank" title="GitHub"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"></a>
+                        <a href="https://www.linkedin.com/in/onyeka-nwokike" target="_blank" title="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"></a>
+                        <a href="https://x.com/aham_bu_onyeka" target="_blank" title="Twitter"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter"></a>
                     </div>
                 </div>
-                <!-- Hero Image -->
-                <div class="order-1 md:order-2 flex justify-center items-center animate-fade-in-up" style="animation-delay: 0.2s;">
-                    <div class="relative w-72 h-72 md:w-96 md:h-96">
-                        <div class="absolute inset-0 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-full blur-2xl opacity-50"></div>
-                        <img src="FB_IMG.jpg" alt="A portrait of Onyeka Nwokike" class="relative w-full h-full object-cover rounded-full border-4 border-light-card dark:border-dark-card shadow-2xl animate-subtle-pulse"
-                             onerror="this.onerror=null; this.src='https://placehold.co/400x400/1e293b/e2e8f0?text=Onyeka';">
-                    </div>
+                <div class="hero-img">
+                    <img src="FB_IMG.jpg" alt="Onyeka Nwokike photo" onerror="this.src='https://placehold.co/400x400/1e293b/e2e8f0?text=Onyeka';">
                 </div>
             </div>
         </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-24">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-light-text dark:text-white">My Story</h2>
-                <p class="text-light-subtext dark:text-dark-subtext mt-2">From Engineering to Software Development</p>
-            </div>
-            <div class="bg-light-card dark:bg-dark-card p-8 md:p-12 rounded-2xl shadow-xl dark:shadow-2xl max-w-4xl mx-auto animate-fade-in-up">
-                <p class="text-lg text-light-subtext dark:text-dark-subtext leading-relaxed">
-                    My journey started in Agricultural and Bioresources Engineering, where I learned to break down complex problems and design efficient systems. This analytical mindset sparked my passion for software development, where I could build the technology that powers modern solutions.
-                </p>
-                <p class="text-lg text-light-subtext dark:text-dark-subtext leading-relaxed mt-4">
-                    I am sharpening my skills through the <strong>Power Learn Project</strong> to build more robust and scalable software, focusing on mastering the tools that bring ideas to life on the web.
+        <!-- About -->
+        <section class="section" id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>
+                    My journey started in Agricultural & Bioresources Engineering, where I learned systematic problem solving. Now, I build technology for real-world impact, sharpening my skills with the Power Learn Project and open source.
                 </p>
             </div>
         </section>
-
-        <!-- Skills Section -->
-        <section id="scale" class="py-24">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-light-text dark:text-white">My Skill Scale</h2>
-                <p class="text-light-subtext dark:text-dark-subtext mt-2">The technologies I use to build projects.</p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Skill Card: HTML -->
-                <div class="skill-card bg-light-card dark:bg-dark-card p-8 rounded-2xl shadow-lg hover:shadow-orange-500/20 hover:-translate-y-2 transition-all duration-300 animate-fade-in-up">
-                    <div class="flex items-center mb-4">
-                        <div class="p-3 bg-orange-500/10 rounded-lg mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-500"><path d="m10 10-2 2 2 2"/><path d="m14 14 2-2-2-2"/></svg></div>
-                        <h3 class="text-xl font-bold text-light-text dark:text-white">HTML5</h3>
+        <!-- Skills -->
+        <section class="section" id="skills">
+            <div class="container">
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">HTML5</div>
+                    <div class="skill-card">CSS3</div>
+                    <div class="skill-card">JavaScript</div>
+                    <div class="skill-card skill-cert">
+                        Python (PCAP Certified)
+                        <button class="btn small" id="certBtn">View Certificate</button>
                     </div>
-                    <p class="text-light-subtext dark:text-dark-subtext">Structuring semantic, accessible, and well-organized content for the web is my starting point for every project.</p>
-                </div>
-
-                <!-- Skill Card: CSS -->
-                <div class="skill-card bg-light-card dark:bg-dark-card p-8 rounded-2xl shadow-lg hover:shadow-blue-500/20 hover:-translate-y-2 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.1s;">
-                    <div class="flex items-center mb-4">
-                        <div class="p-3 bg-blue-500/10 rounded-lg mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500"><path d="M5.5 9.5A3.5 3.5 0 0 1 9 6h6a3.5 3.5 0 0 1 3.5 3.5v5A3.5 3.5 0 0 1 15 18H9a3.5 3.5 0 0 1-3.5-3.5Z"/><path d="M9 12v0"/></svg></div>
-                        <h3 class="text-xl font-bold text-light-text dark:text-white">CSS3 & Tailwind</h3>
-                    </div>
-                    <p class="text-light-subtext dark:text-dark-subtext">I create visually appealing and responsive layouts, using modern CSS features and the efficiency of Tailwind CSS.</p>
-                </div>
-
-                <!-- Skill Card: JavaScript -->
-                <div class="skill-card bg-light-card dark:bg-dark-card p-8 rounded-2xl shadow-lg hover:shadow-yellow-500/20 hover:-translate-y-2 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.2s;">
-                    <div class="flex items-center mb-4">
-                        <div class="p-3 bg-yellow-500/10 rounded-lg mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-500"><path d="M10 15v-5"/><path d="M14 15v-5"/><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg></div>
-                        <h3 class="text-xl font-bold text-light-text dark:text-white">JavaScript</h3>
-                    </div>
-                    <p class="text-light-subtext dark:text-dark-subtext">Adding interactivity and dynamic functionality to websites to create engaging user experiences.</p>
-                </div>
-                
-                <!-- Skill Card: Python -->
-                <div class="skill-card bg-light-card dark:bg-dark-card p-8 rounded-2xl shadow-lg hover:shadow-green-500/20 hover:-translate-y-2 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.3s;">
-                    <div class="flex items-center mb-4">
-                        <div class="p-3 bg-green-500/10 rounded-lg mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500"><path d="m13.5 2 4.5 4.5-10 10-4.5 1 1-4.5Z"/><path d="m22 2-4.5 4.5"/></svg></div>
-                        <h3 class="text-xl font-bold text-light-text dark:text-white">Python</h3>
-                    </div>
-                    <p class="text-light-subtext dark:text-dark-subtext mb-4">PCAP-certified, with a focus on re-mastering it for backend services and data-driven applications.</p>
-                     <a href="./ONYEKANWOKIKE-Programming Esse-certificate.pdf" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 bg-gray-100 dark:bg-slate-700 text-light-subtext dark:text-dark-subtext font-semibold px-4 py-2 rounded-lg text-sm hover:bg-gray-200 dark:hover:bg-slate-600 hover:text-light-text dark:hover:text-white transition-colors duration-300">
-                        View PCAP Certificate
-                    </a>
-                </div>
-
-                <!-- Skill Card: WordPress & SEO -->
-                <div class="skill-card bg-light-card dark:bg-dark-card p-8 rounded-2xl shadow-lg hover:shadow-purple-500/20 hover:-translate-y-2 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.4s;">
-                    <div class="flex items-center mb-4">
-                        <div class="p-3 bg-purple-500/10 rounded-lg mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-500"><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M20.1 12a8.1 8.1 0 0 0-16.2 0"/><path d="M16.5 16.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M20.1 16.5a8.1 8.1 0 0 0-16.2 0"/><path d="M7.5 7.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 7.5a8.1 8.1 0 0 0-8.1 8.1"/></svg></div>
-                        <h3 class="text-xl font-bold text-light-text dark:text-white">WordPress & SEO</h3>
-                    </div>
-                    <p class="text-light-subtext dark:text-dark-subtext">Building full sites with WordPress and implementing data-driven SEO strategies to grow online communities.</p>
-                </div>
-
-                <!-- Skill Card: Database & SQL -->
-                <div class="skill-card bg-light-card dark:bg-dark-card p-8 rounded-2xl shadow-lg hover:shadow-teal-500/20 hover:-translate-y-2 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.5s;">
-                    <div class="flex items-center mb-4">
-                        <div class="p-3 bg-teal-500/10 rounded-lg mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-500"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/></svg></div>
-                        <h3 class="text-xl font-bold text-light-text dark:text-white">Databases & SQL</h3>
-                    </div>
-                    <p class="text-light-subtext dark:text-dark-subtext">Understanding of relational databases to ensure data integrity and support application backends.</p>
+                    <div class="skill-card">WordPress & SEO</div>
+                    <div class="skill-card">Databases & SQL</div>
                 </div>
             </div>
         </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-24">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-light-text dark:text-white">Featured Work</h2>
-                <p class="text-light-subtext dark:text-dark-subtext mt-2">A selection of projects where I've made an impact.</p>
-            </div>
-            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Project Card: Igbo Archives -->
-                <div class="project-card group bg-light-card dark:bg-dark-card rounded-2xl overflow-hidden shadow-lg hover:shadow-brand-secondary/20 transition-all duration-300 animate-fade-in-up">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-light-text dark:text-white mb-2">Igbo Archives</h3>
-                        <p class="text-light-subtext dark:text-dark-subtext mb-6">As founder, I managed the entire product lifecycle, from technical development to a content and SEO strategy that drives significant organic growth.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="tag bg-brand-secondary/10 text-brand-secondary px-3 py-1 rounded-full text-sm font-semibold">WordPress</span>
-                            <span class="tag bg-brand-secondary/10 text-brand-secondary px-3 py-1 rounded-full text-sm font-semibold">SEO</span>
-                            <span class="tag bg-brand-secondary/10 text-brand-secondary px-3 py-1 rounded-full text-sm font-semibold">Founder</span>
-                        </div>
-                        <a href="https://Igboarchives.com.ng" target="_blank" rel="noopener noreferrer" class="font-semibold text-brand-primary group-hover:text-blue-400 transition-colors duration-300">
-                            Visit Site &rarr;
-                        </a>
+        <!-- Projects -->
+        <section class="section" id="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>YieldWise AI</h3>
+                        <p>
+                            An all-in-one platform for African farmers to plan profitable farms, diagnose plant diseases with a photo, and build their agricultural business using the power of AI.<br>
+                            <em>Core Features:</em> AI Farm Planner, Plant Disease Diagnosis, Shareable Showcases, Professional PDFs, Interactive Chat, and User Accounts.<br>
+                            <strong>Tech:</strong> Python, Flask, SQLite, LangChain, Google Gemini, HTML5/CSS3/JS
+                        </p>
+                        <a href="https://yieldwise-ai.onrender.com/" target="_blank" class="project-link">Live Demo &rarr;</a>
+                        <a href="https://github.com/Nwokike/yieldwise-ai" target="_blank" class="project-link">GitHub Repo &rarr;</a>
                     </div>
-                </div>
-                <!-- Project Card: Barroti Apartments -->
-                <div class="project-card group bg-light-card dark:bg-dark-card rounded-2xl overflow-hidden shadow-lg hover:shadow-brand-secondary/20 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.1s;">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-light-text dark:text-white mb-2">Barroti Apartments</h3>
-                        <p class="text-light-subtext dark:text-dark-subtext mb-6">Designed and launched a modern website to elevate the brand's online presence, focusing on a clean UI and effective lead generation.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="tag bg-brand-secondary/10 text-brand-secondary px-3 py-1 rounded-full text-sm font-semibold">WordPress</span>
-                            <span class="tag bg-brand-secondary/10 text-brand-secondary px-3 py-1 rounded-full text-sm font-semibold">Lead Gen</span>
-                            <span class="tag bg-brand-secondary/10 text-brand-secondary px-3 py-1 rounded-full text-sm font-semibold">UI/UX</span>
-                        </div>
-                        <a href="https://apartments.barroti.org" target="_blank" rel="noopener noreferrer" class="font-semibold text-brand-primary group-hover:text-blue-400 transition-colors duration-300">
-                            Visit Site &rarr;
-                        </a>
+                    <div class="project-card">
+                        <h3>Ubuntu Requests – Image Fetcher</h3>
+                        <p>
+                            Inspired by the Ubuntu philosophy: <q>I am because we are.</q><br>
+                            Demonstrates how Python can connect to the global community, fetch/share images, and organize them efficiently.<br>
+                            <em>Features:</em> Fetches images from URLs, skips duplicates, checks file size/type, and handles errors gracefully.<br>
+                            <strong>Tech:</strong> Python, Requests
+                        </p>
+                        <a href="https://github.com/Nwokike/Ubuntu_Requests" target="_blank" class="project-link">GitHub Repo &rarr;</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Igbo Archives</h3>
+                        <p>
+                            Founder. Managed technical development and SEO for organic growth.<br>
+                            A content-driven project for preserving Igbo heritage.<br>
+                            <strong>Built with:</strong> WordPress
+                        </p>
+                        <a href="https://Igboarchives.com.ng" target="_blank" class="project-link">Visit Site &rarr;</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Barroti Apartments</h3>
+                        <p>
+                            Designed a modern brand site for lead generation and a clean UI.<br>
+                            <strong>Built with:</strong> React
+                        </p>
+                        <a href="https://apartments.barroti.org" target="_blank" class="project-link">Visit Site &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Education & Certifications Section -->
-        <section id="education" class="py-24">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-light-text dark:text-white">Education & Credentials</h2>
-                <p class="text-light-subtext dark:text-dark-subtext mt-2">My formal qualifications and learning journey.</p>
-            </div>
-            <!-- Timeline-like structure -->
-            <div class="max-w-2xl mx-auto">
-                <div class="relative border-l-2 border-gray-200 dark:border-slate-700 space-y-12 pl-8">
-                     <!-- Education Item -->
-                    <div class="relative animate-fade-in-up">
-                        <div class="absolute -left-[42px] top-1.5 h-4 w-4 rounded-full bg-brand-primary"></div>
-                        <p class="font-semibold text-light-subtext dark:text-dark-subtext">2025 - Present</p>
-                        <h3 class="text-xl font-bold text-light-text dark:text-white mt-1">Power Learn Project</h3>
-                        <p class="text-light-subtext dark:text-dark-subtext">Software Engineering Program</p>
+        <!-- Education -->
+        <section class="section" id="education">
+            <div class="container">
+                <h2>Education & Credentials</h2>
+                <div class="timeline">
+                    <div class="edu-item">
+                        <span class="edu-year">2025 - Present</span>
+                        <span class="edu-title">Power Learn Project</span>
+                        <span class="edu-desc">Software Engineering Program</span>
                     </div>
-                     <!-- Education Item -->
-                    <div class="relative animate-fade-in-up" style="animation-delay: 0.1s;">
-                        <div class="absolute -left-[42px] top-1.5 h-4 w-4 rounded-full bg-brand-primary"></div>
-                        <p class="font-semibold text-light-subtext dark:text-dark-subtext">Issued Jul 2019</p>
-                        <h3 class="text-xl font-bold text-light-text dark:text-white mt-1">PCAP: Programming Essentials in Python</h3>
-                        <p class="text-light-subtext dark:text-dark-subtext">Cisco Networking Academy & OpenEDG</p>
+                    <div class="edu-item">
+                        <span class="edu-year">Issued Jul 2019</span>
+                        <span class="edu-title">PCAP: Programming Essentials in Python</span>
+                        <span class="edu-desc">Cisco Networking Academy & OpenEDG</span>
                     </div>
-                     <!-- Education Item -->
-                    <div class="relative animate-fade-in-up" style="animation-delay: 0.2s;">
-                        <div class="absolute -left-[42px] top-1.5 h-4 w-4 rounded-full bg-brand-primary"></div>
-                        <p class="font-semibold text-light-subtext dark:text-dark-subtext">2017 - 2023</p>
-                        <h3 class="text-xl font-bold text-light-text dark:text-white mt-1">University of Nigeria, Nsukka</h3>
-                        <p class="text-light-subtext dark:text-dark-subtext">B.Eng in Agricultural & Bioresources Engineering</p>
+                    <div class="edu-item">
+                        <span class="edu-year">2017 - 2023</span>
+                        <span class="edu-title">University of Nigeria, Nsukka</span>
+                        <span class="edu-desc">B.Eng in Agricultural & Bioresources Engineering</span>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-24 text-center">
-            <h2 class="text-4xl font-bold text-light-text dark:text-white">Let's Connect</h2>
-            <p class="text-lg text-light-subtext dark:text-dark-subtext mt-4 max-w-2xl mx-auto">I'm currently open to new opportunities and collaborations. Feel free to reach out if you think my skills are a good fit for your team.</p>
-            <a href="mailto:nwokikeonyeka@gmail.com" class="mt-8 inline-block bg-brand-primary text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-500 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/30">
-                Send me an Email
-            </a>
+        <!-- Contact -->
+        <section class="section" id="contact">
+            <div class="container">
+                <h2>Let's Connect</h2>
+                <p>I'm open to opportunities and collaborations! Reach out if my skills fit your team.</p>
+                <a href="mailto:nwokikeonyeka@gmail.com" class="btn primary">Send me an Email</a>
+            </div>
         </section>
-
     </main>
-
-    <!-- Footer -->
-    <footer class="py-12 mt-16 border-t border-gray-200 dark:border-slate-800">
-        <div class="container mx-auto px-6 text-center text-light-subtext dark:text-dark-subtext">
-            <p>&copy; <span id="current-year"></span> Onyeka Nwokike. All Rights Reserved.</p>
-            <p class="mt-2">Built with &hearts; and Tailwind CSS</p>
+    <footer>
+        <div class="container">
+            &copy; <span id="year"></span> Onyeka Nwokike. Built with <span class="accent">&hearts;</span>
         </div>
     </footer>
 
-    <!-- 
-      JavaScript for Interactivity
-      - Placed at the end of the body for faster page load perception.
-    -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // --- Feather Icons Initialization ---
-            feather.replace();
+    <!-- Modal for CV and Certificate -->
+    <div id="modal" class="modal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content" id="modalContent">
+            <button id="modalClose" class="modal-close">&times;</button>
+            <iframe id="modalIframe" src="" frameborder="0" title="Document Viewer"></iframe>
+        </div>
+    </div>
 
-            // --- Theme Toggle Functionality ---
-            const themeToggleBtn = document.getElementById('theme-toggle');
-            const htmlElement = document.documentElement;
-
-            // On page load, check for saved theme in localStorage or system preference
-            if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                htmlElement.classList.add('dark');
-            } else {
-                htmlElement.classList.remove('dark');
-            }
-
-            themeToggleBtn.addEventListener('click', () => {
-                htmlElement.classList.toggle('dark');
-                // Save the user's preference in localStorage
-                if (htmlElement.classList.contains('dark')) {
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    localStorage.setItem('theme', 'light');
-                }
-            });
-
-            // --- Mobile Menu Functionality ---
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Close mobile menu when a link is clicked
-            mobileMenu.addEventListener('click', (e) => {
-                if (e.target.tagName === 'A') {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-
-            // --- Dynamic Year for Footer ---
-            const yearSpan = document.getElementById('current-year');
-            if(yearSpan) {
-                yearSpan.textContent = new Date().getFullYear();
-            }
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
