@@ -2,7 +2,7 @@
 
 [![Live Site](https://img.shields.io/badge/Live%20Portfolio-View%20Now-blue?style=for-the-badge&logo=github)](https://nwokike.github.io/portfolio/)
 
-This repository contains the source code for my personal portfolio. Built with HTML, CSS, and vanilla JavaScript, it showcases my journey as a software engineer and agricultural engineer, highlighting my skills, certifications, and key projects.
+This repository contains the source code for my personal portfolio. Built with vanilla HTML, CSS, and JavaScript, it showcases my journey as a software engineer and agricultural engineer, highlighting my skills, certifications, and key projects.
 
 ---
 
@@ -20,7 +20,7 @@ This repository contains the source code for my personal portfolio. Built with H
 
 * **HTML5**: Semantic, well-structured markup.
 * **CSS3**: Custom styles for a unique look and responsive design.
-* **JavaScript (Vanilla)**: For theme switching, modal logic, and mobile menu.
+* **JavaScript**: For theme switching, modal logic, and mobile menu.
 * **SVG Icons**: For crisp, lightweight social and action icons.
 
 ---
