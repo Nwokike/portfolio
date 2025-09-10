@@ -11,7 +11,6 @@ This repository contains the source code for my personal portfolio. Built with v
 * **🌓 Light & Dark Mode**: Theme switcher that remembers your preference.
 * **📱 Fully Responsive Design**: Adapts to all screen sizes.
 * **🚀 Modern UI**: Clean, accessible, and easy to navigate.
-* **📄 Modal Certificate & CV Viewer**: Instantly preview my Python certificate and CV in a modal window.
 * **✉️ Direct Email Contact**: Simple `mailto` link for quick communication.
 
 ---
