@@ -39,7 +39,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 });
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Modal for CV and Certificate
+// Modal for CV and Certificate (INSTANT VIEW)
 const modal = document.getElementById('modal');
 const modalIframe = document.getElementById('modalIframe');
 const modalClose = document.getElementById('modalClose');
