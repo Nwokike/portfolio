@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Onyeka Nwokike | Software Engineer &amp; Agricultural Engineer</title>
-  <meta content="Portfolio of Onyeka Nwokike – Software Engineer &amp; Agricultural Engineer. Building practical digital solutions for real-world impact." name="description"/>
-  <link href="css/style.css" rel="stylesheet"/> <!-- Updated path -->
-  <link href="images/FB_IMG.jpg" rel="icon"/> <!-- Updated path -->
+  <title>Onyeka Nwokike | Software Developer &amp; Agricultural Engineer</title>
+  <meta content="Portfolio of Onyeka Nwokike – Software Developer, Researcher &amp; Agricultural Engineer. Building practical digital solutions for real-world impact." name="description"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <link href="images/FB_IMG.jpg" rel="icon"/>
 </head>
 <body>
   <nav class="navbar">
@@ -41,15 +41,16 @@
   <main>
     <section class="hero">
       <div class="container hero-grid">
-        <div>
+        <div class="hero-text">
           <h1>Onyeka Nwokike</h1>
-          <p class="subtitle">Software Engineer &amp; Agricultural Engineer</p>
+          <p class="subtitle">Software Developer | Researcher | Agricultural & Bioresources Engineer</p>
           <p class="desc">
             I build clean, responsive, and AI powered web applications. <br/>
             I'm passionate about learning, growing, and making a positive impact through technology
           </p>
           <div class="hero-buttons">
-            <button class="btn" id="cvBtn">View CV</button> <!-- This button triggers the modal -->
+            <button class="btn" id="cvBtn">View CV</button>
+            <a class="btn small" href="services.html">Services</a> <!-- Added Services button/link -->
           </div>
           <div class="socials">
             <a aria-label="GitHub" href="https://github.com/Nwokike" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub Icon"/></a>
@@ -58,7 +59,7 @@
           </div>
         </div>
         <div class="hero-pic-wrap">
-          <img alt="Onyeka Nwokike photo" class="hero-pic" onerror="this.src='https://placehold.co/300x300/222/eee?text=Onyeka';" src="images/FB_IMG.jpg"/> <!-- Updated path -->
+          <img alt="Onyeka Nwokike photo" class="hero-pic" onerror="this.src='https://placehold.co/300x300/222/eee?text=Onyeka';" src="images/FB_IMG.jpg"/>
         </div>
       </div>
     </section>
@@ -66,7 +67,7 @@
       <div class="container">
         <h2>About</h2>
         <p>
-          My journey started in Agricultural &amp; Bioresources Engineering.<br/>
+          My journey started in Agricultural &amp; Bioresources Engineering.
           Now, I am building my way up as a Software Engineer through continuous learning, real-world projects, and building solutions that make use of innovative technologies.
         </p>
       </div>
@@ -75,16 +76,26 @@
       <div class="container">
         <h2>Skills</h2>
         <div class="skills-list">
+          <!-- Updated Skills based on markdown -->
+          <span>Python</span>
+          <span>Django</span>
+          <span>Flask</span>
           <span>HTML5</span>
           <span>CSS3</span>
           <span>JavaScript</span>
-          <span class="with-btn">
-            Python
-            <button class="btn small" id="certBtn" title="View Certificate">View Certificate</button> <!-- This button triggers the modal -->
-          </span>
-          <span>Flask</span>
+          <span>Jinja</span>
           <span>WordPress</span>
-          <span>SQL</span>
+          <span>MySQL</span>
+          <span>PostgreSQL</span>
+          <span>Scikit-learn</span>
+          <span>Pandas</span>
+          <span>NumPy</span>
+          <span>Matplotlib</span>
+          <span>REST APIs</span>
+          <span>Oracle Cloud</span>
+          <span>Render</span>
+          <span>Streamlit</span>
+          <span>Git</span>
         </div>
       </div>
     </section>
@@ -92,11 +103,45 @@
       <div class="container">
         <h2>Projects</h2>
         <div class="projects-grid">
+          <!-- Updated Projects based on provided repository info, ordered as requested -->
+          <div class="project-card">
+            <h3>Kiri.ng</h3>
+            <p>
+              A Django-powered platform empowering Nigerian artisans with a marketplace, an innovative AI-driven learning academy, community blogging, and real-time engagement tools. <br>
+              <strong>Stack:</strong> Python, Django, PostgreSQL, Google Gemini, Bootstrap, CKEditor 5, WeasyPrint, Brevo, Cloudinary
+            </p>
+            <div class="project-links">
+              <a href="https://kiri.ng" target="_blank">Live</a>
+              <a href="https://github.com/Nwokike/kiri.ng" target="_blank">GitHub</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>SpanInsight</h3>
+            <p>
+              Data intelligence platform that helps businesses, researchers, and students to collect data through forms, analyze data, build dashboards, and publish content. <br>
+              <strong>Stack:</strong> Python, Django, HTML, CSS, JavaScript
+            </p>
+            <div class="project-links">
+              <a href="https://spaninsight.onrender.com/" target="_blank">Live</a>
+              <a href="https://github.com/Nwokike/spaninsight" target="_blank">GitHub</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>Asase</h3>
+            <p>
+              AI-powered environmental intelligence platform for Africa that provides real-time analysis of flood risk, air quality, and land health. <br>
+              <strong>Stack:</strong> Python, Django, PostgreSQL, Google Gemini, Tailwind CSS, HTMX, Leaflet.js
+            </p>
+            <div class="project-links">
+              <a href="https://asase-app.onrender.com/" target="_blank">Live</a>
+              <a href="https://github.com/Nwokike/Asase" target="_blank">GitHub</a>
+            </div>
+          </div>
           <div class="project-card">
             <h3>YieldWise AI</h3>
             <p>
               AI-powered web tool for African farmers: plan farms, diagnose plant diseases, and grow agribusiness. <br>
-              <strong>Stack:</strong> Python, Flask, LangChain, AI APIs, JS, HTML/CSS
+              <strong>Stack:</strong> Python, Flask, LangChain, AI APIs (Groq, Google Gemini), JS, HTML/CSS, WeasyPrint
             </p>
             <div class="project-links">
               <a href="https://yieldwise-ai.onrender.com/" target="_blank">Live</a>
@@ -104,33 +149,25 @@
             </div>
           </div>
           <div class="project-card">
-            <h3>Ubuntu Requests</h3>
+            <h3>Zelcry</h3>
             <p>
-              Minimal Python tool to fetch and organize images from the web safely.<br>
-              <strong>Stack:</strong> Python, Requests
+              AI-powered cryptocurrency investment platform that provides real-time market insights, real-time news, portfolio management, and sustainable investing tools. <br>
+              <strong>Stack:</strong> Python, Django, PostgreSQL, Groq AI, CoinGecko API, Bootstrap, Chart.js
             </p>
             <div class="project-links">
-              <a href="https://github.com/Nwokike/Ubuntu_Requests" target="_blank">GitHub</a>
+              <a href="https://zelcry.onrender.com/" target="_blank">Live</a>
+              <a href="https://github.com/Nwokike/Zelcry" target="_blank">GitHub</a>
             </div>
           </div>
           <div class="project-card">
-            <h3>Igbo Archives</h3>
+            <h3>Nigerian Hate Speech Analyzer</h3>
             <p>
-              Preserving heritage with a content-rich WordPress website, grown organically with SEO.<br/>
-              <strong>Stack:</strong> WordPress
+              An AI tool that performs multi-class text classification to analyze the topics of harmful online speech in Nigeria. <br>
+              <strong>Stack:</strong> Python, Scikit-learn, Pandas, NLTK, Streamlit
             </p>
             <div class="project-links">
-              <a href="https://igboarchives.com.ng" target="_blank">Visit</a>
-            </div>
-          </div>
-          <div class="project-card">
-            <h3>Barroti Apartments</h3>
-            <p>
-              Modern landing page and lead-gen site for apartments business.<br/>
-              <strong>Stack:</strong> React
-            </p>
-            <div class="project-links">
-              <a href="https://apartments.barroti.org" target="_blank">Visit</a>
+              <a href="https://nigerian-hate-speech-analyzer.streamlit.app/" target="_blank">Live</a>
+              <a href="https://github.com/Nwokike/nigerian-hate-speech-analyzer" target="_blank">GitHub</a>
             </div>
           </div>
         </div>
@@ -155,9 +192,9 @@
     <div class="modal-backdrop" id="modalBackdrop"></div>
     <div class="modal-content" id="modalContent">
       <button class="modal-close" id="modalClose">×</button>
-      <!-- Content will be inserted by JavaScript -->
+
     </div>
   </div>
-  <script src="js/script.js"></script> <!-- Updated path -->
+  <script src="js/script.js"></script>
 </body>
 </html>
