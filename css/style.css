@@ -87,6 +87,26 @@ body.dark .skills-list span { background: var(--card-dark); color: var(--text-da
 .with-btn { display: inline-flex; align-items: center; gap: 0.5rem; }
 .skills-list .btn.small { padding: 0.3rem 0.7rem; font-size: 0.85rem; margin-top: 0; margin-left: 0.3rem; }
 
+/* Project Tags */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.75rem 0;
+}
+.project-tags span {
+  background: var(--bg);
+  color: var(--subtext);
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  line-height: 1.3;
+}
+body.dark .project-tags span {
+  background: var(--bg-dark);
+  color: var(--subtext-dark);
+}
+
 /* Projects */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
 .project-card { background: var(--card); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); border: 1.5px solid var(--border); transition: var(--transition); }
