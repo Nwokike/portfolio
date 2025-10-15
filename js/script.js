@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (themeIcon) themeIcon.textContent = '☀️';
     }
 
-    if (themeToggle) {
+    if(themeToggle) {
         themeToggle.addEventListener('click', function() {
             body.classList.toggle('dark');
             if (body.classList.contains('dark')) {
@@ -25,52 +25,51 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Mobile Menu
+    // Mobile Menu Toggle
     const menuBtn = document.getElementById('menuBtn');
     const closeMenu = document.getElementById('closeMenu');
     const mobileMenu = document.getElementById('mobileMenu');
 
-    if (menuBtn && mobileMenu && closeMenu) {
-        menuBtn.addEventListener('click', () => mobileMenu.classList.add('open'));
-        closeMenu.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    if(menuBtn && mobileMenu && closeMenu) {
+        menuBtn.addEventListener('click', function() {
+            mobileMenu.classList.add('open');
+        });
 
-        document.querySelectorAll('.mobile-menu .nav-link').forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+        closeMenu.addEventListener('click', function() {
+            mobileMenu.classList.remove('open');
+        });
+
+        const navLinks = document.querySelectorAll('.mobile-menu .nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('open');
+            });
         });
     }
 
-    // Update year
+    // Update year in footer
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    // FAQ Accordion – only if FAQ exists
+    // FAQ Accordion (Only on services.html)
     const faqItems = document.querySelectorAll('.faq-item');
-    if (faqItems.length > 0) {
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            if (!question) return;
-            question.addEventListener('click', () => {
-                const answer = item.querySelector('.faq-answer');
-                const isActive = question.classList.contains('active');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const answer = item.querySelector('.faq-answer');
+            const isActive = question.classList.contains('active');
 
-                // Close all
-                faqItems.forEach(otherItem => {
-                    const q = otherItem.querySelector('.faq-question');
-                    const a = otherItem.querySelector('.faq-answer');
-                    if (q && a) {
-                        q.classList.remove('active');
-                        a.style.maxHeight = null;
-                    }
-                });
-
-                // Open clicked if not active
-                if (!isActive && answer) {
-                    question.classList.add('active');
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                }
+            faqItems.forEach(otherItem => {
+                otherItem.querySelector('.faq-question').classList.remove('active');
+                otherItem.querySelector('.faq-answer').style.maxHeight = null;
             });
+
+            if (!isActive) {
+                question.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
         });
-    }
+    });
 });
