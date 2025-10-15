@@ -41,5 +41,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Update year
     const yearSpan = document.getElementById('year');
-    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
+    // FAQ Accordion – only if FAQ exists
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (faqItems.length > 0) {
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            if (!question) return;
+            question.addEventListener('click', () => {
+                const answer = item.querySelector('.faq-answer');
+                const isActive = question.classList.contains('active');
+
+                // Close all
+                faqItems.forEach(otherItem => {
+                    const q = otherItem.querySelector('.faq-question');
+                    const a = otherItem.querySelector('.faq-answer');
+                    if (q && a) {
+                        q.classList.remove('active');
+                        a.style.maxHeight = null;
+                    }
+                });
+
+                // Open clicked if not active
+                if (!isActive && answer) {
+                    question.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+    }
 });
