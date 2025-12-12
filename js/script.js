@@ -7,21 +7,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
+    function updateIcon(isDark) {
+        if (themeIcon) {
+            if (isDark) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        }
+    }
+
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
         body.classList.add('dark');
-        if (themeIcon) themeIcon.textContent = '☀️';
+        updateIcon(true);
+    } else {
+        updateIcon(false);
     }
 
     if(themeToggle) {
         themeToggle.addEventListener('click', function() {
             body.classList.toggle('dark');
-            if (body.classList.contains('dark')) {
-                themeIcon.textContent = '☀️';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                themeIcon.textContent = '🌙';
-                localStorage.setItem('theme', 'light');
-            }
+            const isDark = body.classList.contains('dark');
+            updateIcon(isDark);
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
     }
 
@@ -47,29 +57,51 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Typewriter Effect
+    const typewriterElement = document.getElementById('typewriter-text');
+    if (typewriterElement) {
+        const phrases = [
+            "Building Intelligent Software",
+            "Engineering for Impact",
+            "NLP Research for Africa",
+            "Agricultural Engineering"
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50; // Deleting speed
+            } else {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100; // Typing speed
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause at end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500; // Pause before next phrase
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        setTimeout(type, 1000);
+    }
+
     // Update year in footer
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
-
-    // FAQ Accordion (Only on services.html)
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            const answer = item.querySelector('.faq-answer');
-            const isActive = question.classList.contains('active');
-
-            faqItems.forEach(otherItem => {
-                otherItem.querySelector('.faq-question').classList.remove('active');
-                otherItem.querySelector('.faq-answer').style.maxHeight = null;
-            });
-
-            if (!isActive) {
-                question.classList.add('active');
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-            }
-        });
-    });
 });
