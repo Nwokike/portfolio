@@ -7,26 +7,37 @@
 <meta content="Software development services, from custom web applications to professional websites, with clear and competitive pricing." name="description"/>
 <link href="css/style.css" rel="stylesheet"/>
 <link href="images/FB_IMG.jpg" rel="icon"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 <nav class="navbar">
 <div class="container nav-row">
-<div class="logo">Onyeka</div>
-<div class="nav-actions">
-<button id="themeToggle" title="Toggle dark mode">
-<span aria-hidden="true" id="themeIcon">🌙</span>
-</button>
-<button aria-label="Open menu" class="menu-btn" id="menuBtn">☰</button>
-</div>
-<ul class="nav-links" id="navLinks">
-<li><a class="nav-link" href="index.html">Home</a></li>
-</ul>
+  <a href="index.html" class="logo">Onyeka<span class="dot">.</span></a>
+  <div class="nav-actions">
+    <button id="themeToggle" title="Toggle dark mode">
+      <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+    <button aria-label="Open menu" class="menu-btn" id="menuBtn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a class="nav-link" href="index.html">Home</a></li>
+    <li><a class="nav-link" href="index.html#projects">Projects</a></li>
+    <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+  </ul>
 </div>
 <div class="mobile-menu" id="mobileMenu">
-<button aria-label="Close menu" class="close-btn" id="closeMenu">×</button>
-<ul>
-<li><a class="nav-link" href="index.html">Home</a></li>
-</ul>
+  <div class="mobile-header">
+      <span class="logo">Onyeka<span class="dot">.</span></span>
+      <button aria-label="Close menu" class="close-btn" id="closeMenu">×</button>
+  </div>
+  <ul>
+    <li><a class="nav-link" href="index.html">Home</a></li>
+    <li><a class="nav-link" href="index.html#projects">Projects</a></li>
+    <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+  </ul>
 </div>
 </nav>
 <main>
