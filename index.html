@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Onyeka Nwokike | Software Engineer &amp; Agricultural Engineer</title>
-  <meta content="Portfolio of Onyeka Nwokike – Software Engineer &amp; Agricultural Engineer. Building practical digital solutions for real-world impact." name="description"/>
+  <title>Onyeka Nwokike | Software Developer &amp; AI Researcher</title>
+  <meta content="Portfolio of Onyeka Nwokike – Software Developer, AI Researcher, and Agricultural Engineer. Building intelligent software and engineering for impact." name="description"/>
   <link href="css/style.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="images/FB_IMG.jpg" rel="icon"/>
 </head>
 <body>
+  
   <nav class="navbar">
     <div class="container nav-row">
-      <div class="logo">Onyeka</div>
+      <div class="logo">Onyeka.</div>
       <div class="nav-actions">
         <button id="themeToggle" title="Toggle dark mode">
           <span aria-hidden="true" id="themeIcon">🌙</span>
@@ -20,220 +24,258 @@
       </div>
       <ul class="nav-links" id="navLinks">
         <li><a class="nav-link" href="#about">About</a></li>
-        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#research">Research</a></li>
         <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
         <li><a class="nav-link" href="#contact">Contact</a></li>
-        <li><a class="nav-link" href="services.html">Services</a></li>
+        <li><a class="nav-link btn-link" href="services.html">Services</a></li>
       </ul>
     </div>
+    
     <div class="mobile-menu" id="mobileMenu">
       <button aria-label="Close menu" class="close-btn" id="closeMenu">×</button>
       <ul>
         <li><a class="nav-link" href="#about">About</a></li>
-        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#research">Research</a></li>
         <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
         <li><a class="nav-link" href="#contact">Contact</a></li>
-        <li><a class="nav-link" href="services.html">Services</a></li>
+        <li><a class="nav-link highlight" href="services.html">Services</a></li>
       </ul>
     </div>
   </nav>
+
   <main>
-    <section class="hero">
+    <section class="hero" id="about">
       <div class="container hero-grid">
-        <div>
-          <h1>Onyeka Nwokike</h1>
-          <p class="subtitle">Software Engineer &amp; Agricultural Engineer</p>
+        <div class="hero-text">
+          <div class="badge">Available for hire</div>
+          <h1>Building Intelligent Software &amp; <span class="text-gradient">Engineering for Impact.</span></h1>
+          <p class="subtitle">Software Developer | AI Researcher | Agricultural &amp; Bioresources Engineer</p>
           <p class="desc">
-            I build clean, responsive, and AI powered products. <br/>
-            I like learning new things and improving with every project.
+            I specialize in Python, Full-Stack Development, and NLP Research for Africa. I build clean, scalable, and AI-powered solutions that solve real-world problems.
           </p>
           <div class="hero-buttons">
-            <a class="btn" href="pdfs/CV ONYEKA NWOKIKE .pdf" target="_blank">View CV</a>
-            <a class="btn small" href="services.html">Services</a>
+            <a class="btn primary" href="#projects">View Work</a>
+            <a class="btn secondary" href="pdfs/CV ONYEKA NWOKIKE .pdf" target="_blank">Download CV</a>
           </div>
           <div class="socials">
             <a aria-label="GitHub" href="https://github.com/Nwokike" target="_blank">
-              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-              </svg>
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/onyeka-nwokike" target="_blank">
+               <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
             <a aria-label="Email" href="mailto:nwokikeonyeka@gmail.com">
-              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor" d="M12 12.713l-5.438-4.213c-.39-.302-.938-.276-1.292.064-.354.34-.387.877-.09 1.247l6.33 7.913c.187.233.473.355.76.355.287 0 .574-.122.76-.355l6.33-7.913c.297-.37.264-.907-.09-1.247-.354-.34-.902-.366-1.292-.064L12 12.713z"/>
-              </svg>
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-11.174l4.623 5.462zm5.377 2.738l-5.364-6.339 5.364-4.383 5.373 4.382-5.373 6.34zm5.375-2.738l4.625-5.461v11.175l-4.625-5.714z"/></svg>
             </a>
           </div>
         </div>
         <div class="hero-pic-wrap">
-          <img alt="Onyeka Nwokike photo" class="hero-pic" onerror="this.src='https://placehold.co/300x300/222/eee?text=Onyeka';" src="images/FB_IMG.jpg"/>
+          <div class="pic-blob"></div>
+          <img alt="Onyeka Nwokike" class="hero-pic" src="images/FB_IMG.jpg"/>
         </div>
       </div>
     </section>
-    <section class="section" id="about">
+
+    <section class="section" id="research">
       <div class="container">
-        <h2>About</h2>
-        <p>
-          I’m Onyeka Nwokike. I write code, work with data, and keep learning new ways to make things work better.
-        </p>
-      </div>
-    </section>
-    <section class="section" id="skills">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-list">
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <span class="with-btn">
-            Python
-            <a class="btn small" href="pdfs/ONYEKANWOKIKE-Programming Esse-certificate.pdf" target="_blank" title="View Certificate">View Certificate</a>
-          </span>
-          <span>Django</span>
-          <span>MySQL</span>
-          <span>PostgreSQL</span>
-          <span>Scikit-learn</span>
-          <span>Pandas</span>
-          <span>NumPy</span>
-          <span>Matplotlib</span>
-          <span>REST APIs</span>
-          <span>Git</span>
-          <span>WordPress</span>
+        <h2 class="section-title">NLP &amp; Research Contributions</h2>
+        <p class="section-subtitle">Advancing African Language Technology through AI.</p>
+        <div class="research-grid">
+          <div class="research-card">
+            <div class="card-icon">🗣️</div>
+            <h3>Igbo Bilingual Chat</h3>
+            <p>Fine-tuned Phi-3-mini to understand, translate, and converse in Igbo while retaining English capabilities.</p>
+            <a href="https://huggingface.co/nwokikeonyeka/Igbo-Phi3-Bilingual-Chat-v1-merged" target="_blank" class="text-link">View on Hugging Face &rarr;</a>
+          </div>
+          <div class="research-card">
+            <div class="card-icon">🔄</div>
+            <h3>Igbo Translator</h3>
+            <p>Specialized English-to-Igbo translator fine-tuned from Microsoft's Phi-3-mini architecture.</p>
+            <a href="https://huggingface.co/nwokikeonyeka/igbo-phi3-translator" target="_blank" class="text-link">View on Hugging Face &rarr;</a>
+          </div>
+          <div class="research-card">
+            <div class="card-icon">🕷️</div>
+            <h3>Igbo Archives Scrapers</h3>
+            <p>Modular scraper engine for collecting museum and blog data to build robust datasets.</p>
+            <a href="https://github.com/Nwokike/igbo-archives-scrapers" target="_blank" class="text-link">View on GitHub &rarr;</a>
+          </div>
         </div>
       </div>
     </section>
+
     <section class="section" id="projects">
       <div class="container">
-        <h2>Projects</h2>
+        <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
+          
           <div class="project-card">
-            <h3>Kiri.ng</h3>
-            <p>
-              A Django-powered platform empowering Nigerian artisans with a marketplace, an innovative AI-driven learning academy, community blogging, and real-time engagement tools.
-            </p>
-            <div class="project-tags">
-              <span>Python</span><span>Django</span><span>PostgreSQL</span><span>Google Gemini</span><span>Bootstrap</span><span>CKEditor 5</span><span>django-pwa</span>
+            <div class="project-header">
+              <h3>Imara</h3>
+              <div class="project-icons">
+                <a href="https://github.com/Nwokike/Imara" target="_blank" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                <a href="https://project-imara.onrender.com/" target="_blank" aria-label="Live Demo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="https://kiri.ng" target="_blank">Live</a>
-              <a href="https://github.com/Nwokike/kiri.ng" target="_blank">GitHub</a>
+            <p>Digital Bodyguard designed to protect women and girls from online gender-based violence (OGBV) within messaging apps.</p>
+            <div class="project-tags">
+              <span>Python</span><span>AI</span><span>Security</span>
             </div>
           </div>
+
           <div class="project-card">
-            <h3>SpanInsight</h3>
-            <p>
-              Data intelligence platform that helps businesses, researchers, and students to collect data through forms, analyze data, build dashboards, and publish content.
-            </p>
-            <div class="project-tags">
-              <span>Django</span><span>PostgreSQL</span><span>Celery</span><span>Redis</span><span>Gunicorn</span><span>Nginx</span><span>Docker</span><span>django-pwa</span>
+            <div class="project-header">
+              <h3>SpanInsight</h3>
+              <div class="project-icons">
+                <a href="https://github.com/Nwokike/spaninsight" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                <a href="https://spaninsight.com/" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="https://spaninsight.onrender.com/" target="_blank">Live</a>
-              <a href="https://github.com/Nwokike/spaninsight" target="_blank">GitHub</a>
+            <p>Data intelligence platform helping businesses and researchers collect forms, analyze data, and build dashboards.</p>
+            <div class="project-tags">
+              <span>Django</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span>
             </div>
           </div>
+
           <div class="project-card">
-            <h3>Asase</h3>
-            <p>
-              AI-powered environmental intelligence platform for Africa that provides real-time analysis of flood risk, air quality, and land health.
-            </p>
-            <div class="project-tags">
-              <span>Django</span><span>PostgreSQL</span><span>OpenWeather</span><span>Open-Meteo</span><span>OpenStreetMap</span><span>Google Gemini</span><span>django-pwa</span>
+            <div class="project-header">
+              <h3>Igbo Archives</h3>
+              <div class="project-icons">
+                <a href="https://github.com/Nwokike/igbo-archives-platform" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                <a href="https://igboarchives.com.ng" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="https://asase-app.onrender.com/" target="_blank">Live</a>
-              <a href="https://github.com/Nwokike/asase" target="_blank">GitHub</a>
+            <p>A modern PWA for the Igbo Archives, built with Django, HTMX, and Neon database.</p>
+            <div class="project-tags">
+              <span>Django</span><span>HTMX</span><span>Neon DB</span>
             </div>
           </div>
+
           <div class="project-card">
-            <h3>Nigerian Hate Speech Analyzer</h3>
-            <p>
-              An AI tool that performs multi-class text classification to analyze the topics of harmful online speech in Nigeria.
-            </p>
-            <div class="project-tags">
-              <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Streamlit</span>
+            <div class="project-header">
+              <h3>Kiriong</h3>
+              <div class="project-icons">
+                <a href="https://github.com/Nwokike/kiriong" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                <a href="https://kiriong.onrender.com" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="https://nigerian-hate-speech-analyzer.streamlit.app/" target="_blank">Live</a>
-              <a href="https://github.com/Nwokike/nigerian-hate-speech-analyzer" target="_blank">GitHub</a>
+            <p>Django-powered platform empowering Nigerian artisans with a marketplace, AI learning academy, and community tools.</p>
+            <div class="project-tags">
+              <span>Django</span><span>Google Gemini</span><span>PWA</span>
             </div>
           </div>
+
           <div class="project-card">
-            <h3>YieldWise AI</h3>
-            <p>
-              AI platform for African farmers that provides farm planning, crop disease diagnosis, and business insights through intelligent analysis tools.
-            </p>
-            <div class="project-tags">
-              <span>Python</span><span>Flask</span><span>LangChain</span><span>Groq Llama 3.1</span><span>Google Gemini</span><span>JS</span><span>HTML/CSS</span>
+            <div class="project-header">
+              <h3>Akili</h3>
+              <div class="project-icons">
+                <a href="https://github.com/Nwokike/Akili" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                <a href="https://akili-jwe7.onrender.com" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="https://yieldwise-ai.onrender.com/" target="_blank">Live</a>
-              <a href="https://github.com/Nwokike/yieldwise-ai" target="_blank">GitHub</a>
+            <p>Django-based learning platform with courses, quizzes, exams, KaTeX for math formulas, and PWA support.</p>
+            <div class="project-tags">
+              <span>Django</span><span>KaTeX</span><span>Education</span>
             </div>
           </div>
+
           <div class="project-card">
-            <h3>Zelcry</h3>
-            <p>
-              AI-powered cryptocurrency investment platform that provides real-time market insights, real-time news, portfolio management, and sustainable investing tools.
-            </p>
-            <div class="project-tags">
-              <span>Django</span><span>PostgreSQL</span><span>CoinGecko API</span><span>Bootstrap</span><span>Chart.js</span><span>Groq AI</span>
+            <div class="project-header">
+              <h3>NewsCheck AI</h3>
+              <div class="project-icons">
+                <a href="https://github.com/Nwokike/newscheck-ai" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                <a href="https://newscheck-ai.streamlit.app/" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="https://zelcry.onrender.com/" target="_blank">Live</a>
-              <a href="https://github.com/Nwokike/zelcry" target="_blank">GitHub</a>
+            <p>Modular NLP project using multiple AI models to evaluate credibility, sentiment, and bias in news content.</p>
+            <div class="project-tags">
+              <span>NLP</span><span>Python</span><span>Streamlit</span>
             </div>
           </div>
+          
           <div class="project-card">
-            <h3>Ubuntu Requests</h3>
-            <p>
-              Minimal Python tool to fetch and organize images from the web safely.
-            </p>
-            <div class="project-tags">
-              <span>Python</span><span>Requests</span>
+            <div class="project-header">
+              <h3>Asase</h3>
+              <div class="project-icons">
+                <a href="https://github.com/Nwokike/asase" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                <a href="https://asase-app.onrender.com/" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/Nwokike/Ubuntu_Requests" target="_blank">GitHub</a>
+            <p>AI-powered environmental intelligence platform for Africa providing real-time analysis of flood risk and air quality.</p>
+            <div class="project-tags">
+              <span>GeoDjango</span><span>Leaflet</span><span>OpenWeather</span>
             </div>
           </div>
+
           <div class="project-card">
-            <h3>Igbo Archives</h3>
-            <p>
-              Preserving heritage with a content-rich WordPress website, grown organically with SEO.
-            </p>
-            <div class="project-tags">
-              <span>WordPress</span>
+            <div class="project-header">
+              <h3>Harmful Speech</h3>
+              <div class="project-icons">
+                <a href="https://github.com/Nwokike/nigerian-hate-speech-analyzer" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                <a href="https://nigerian-hate-speech-analyzer.streamlit.app/" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="https://igboarchives.com.ng" target="_blank">Visit</a>
+            <p>Multi-class AI classifier detecting topics of harmful online speech in Nigeria.</p>
+            <div class="project-tags">
+              <span>Scikit-learn</span><span>Streamlit</span><span>NLP</span>
             </div>
           </div>
-          <div class="project-card">
-            <h3>Barroti Apartments</h3>
-            <p>
-              Modern landing page and lead-gen site for apartments business.
-            </p>
-            <div class="project-tags">
-              <span>React</span>
-            </div>
-            <div class="project-links">
-              <a href="https://apartments.barroti.org" target="_blank">Visit</a>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
+    
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-wrapper">
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <div class="skills-list">
+              <span>Python</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>SQL</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Frameworks</h3>
+            <div class="skills-list">
+              <span>Django</span><span>Flask</span><span>FastAPI</span><span>HTMX</span><span>Tailwind</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Data & AI</h3>
+            <div class="skills-list">
+              <span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>Hugging Face</span><span>PyTorch</span>
+            </div>
+          </div>
+          <div class="skill-category">
+             <h3>Tools</h3>
+             <div class="skills-list">
+               <span>Git</span><span>PostgreSQL</span><span>Docker</span><span>Render</span><span>Linux</span>
+             </div>
+          </div>
+        </div>
+        <div class="cert-link">
+             <a class="btn small" href="pdfs/ONYEKANWOKIKE-Programming Esse-certificate.pdf" target="_blank">View Python Certification</a>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="contact">
       <div class="container contact-card">
-        <h2>Contact</h2>
-        <p>Want to collaborate, or just say hi?</p>
-        <a class="btn" href="mailto:nwokikeonyeka@gmail.com">Email Me</a>
+        <h2>Let's Build Something Together.</h2>
+        <p>Interested in collaborating on AI, Software Engineering, or Research?</p>
+        <a class="btn primary" href="mailto:nwokikeonyeka@gmail.com">Get In Touch</a>
       </div>
     </section>
   </main>
+
   <footer>
     <div class="container">
-      <span>© <span id="year"></span> Onyeka Nwokike</span>
+      <p>© <span id="year"></span> Onyeka Nwokike. All rights reserved.</p>
     </div>
   </footer>
+
   <script src="js/script.js"></script>
 </body>
 </html>
