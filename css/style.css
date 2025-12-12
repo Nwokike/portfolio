@@ -501,12 +501,18 @@ body.dark .navbar {
 }
 
 /* Color Coding */
-.skill-badge.python, .skill-badge.django, .skill-badge.flask { border-left-color: #3776AB; }
+.skill-badge.python, .skill-badge.django { border-left-color: #3776AB; }
 .skill-badge.js, .skill-badge.htmx { border-left-color: #F7DF1E; }
 .skill-badge.html { border-left-color: #E34F26; }
 .skill-badge.tailwind { border-left-color: #06B6D4; }
 .skill-badge.postgres, .skill-badge.docker { border-left-color: #336791; }
 .skill-badge.hf, .skill-badge.sklearn { border-left-color: #FFD21E; }
+/* New/Updated */
+.skill-badge.fastapi { border-left-color: #009688; }
+.skill-badge.streamlit { border-left-color: #FF4B4B; }
+.skill-badge.mysql { border-left-color: #4479A1; }
+.skill-badge.sqlite { border-left-color: #07405E; }
+
 
 /* ─────────────────────────────────────────────────────
    PROJECTS
